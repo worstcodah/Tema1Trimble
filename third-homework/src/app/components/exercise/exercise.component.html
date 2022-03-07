@@ -1,0 +1,25 @@
+<p>
+  exercise works!
+</p>
+<ng-template #button>
+  <p [style.background]="bgColor">Title</p>
+  <input type="text" [(ngModel)]="inputColor">
+  <button mat-button (click)="setBackground()">Set background </button>
+</ng-template>
+
+<ng-template #nobutton>
+  <p [style.background]="inputColor">Title</p>
+  <input type="text" [(ngModel)]="inputColor">
+
+</ng-template>
+
+<button (click)="changeTemplate()">
+
+  <p *ngIf="buttonTemplate == outlet">Change to template w/o button (color changes as you
+    write)</p>
+  <p *ngIf="noButtonTemplate == outlet">Change to template with button</p>
+</button>
+
+<div class="wrapper">
+  <ng-container *ngTemplateOutlet="outlet || null"></ng-container>
+</div>
