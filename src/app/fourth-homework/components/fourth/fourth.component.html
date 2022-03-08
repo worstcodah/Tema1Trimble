@@ -1,0 +1,5 @@
+<p>Uppercased strings: {{firstString | uppercase}} {{secondString | uppercase }}</p>
+<p redBackground>String with an added hyphen (-) {{firstString | customPipe}}</p>
+<div *ngFor="let element of elementList, let even=even">
+  <p *ngIf="even">{{element | date:"shortDate"}}</p>
+</div>
