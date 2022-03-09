@@ -1,5 +1,6 @@
 import { Directive, ElementRef } from '@angular/core'
 
+//Color parameter, rename selector
 @Directive({
   selector: '[redBackground]',
 })
